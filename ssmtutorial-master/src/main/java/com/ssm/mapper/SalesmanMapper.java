@@ -13,5 +13,10 @@ public interface SalesmanMapper {
     public Salesman selectSalesmanByID(int id);
     @Autowired
     public List<Salesman> selectSalesman();
-
+    @Autowired
+    public void addSalesman(Salesman salesman);
+    @Autowired
+    public void updateSalesman(Salesman salesman);
+    @Autowired
+    public void deleteSalesman(int id);
 }

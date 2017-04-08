@@ -19,4 +19,24 @@
         select * from salesmansz
 
     </select>
+    <insert id="addSalesman" parameterType="com.ssm.model.Salesman" useGeneratedKeys="true" keyProperty="id">
+
+        insert into salesmansz (id, name, date)
+
+        values (#{id}, #{name}, #{date})
+    </insert>
+    <update id="updateSalesman" parameterType="com.ssm.model.Salesman">
+
+        update salesmansz set name = #{name},
+
+        date = #{date}
+
+        where id = #{id}
+
+    </update>
+    <delete id="deleteSalesman" parameterType="int">
+
+        delete from salesmansz where id = #{id}
+
+    </delete>
 </mapper>
